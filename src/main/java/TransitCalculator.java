@@ -74,7 +74,7 @@ public class TransitCalculator{
       fares.add(1.35);
       fares.add(16.50);
       fares.add(63.50);
-      //{1.35,16.50,63.50} are the fares if discount is true
+      //1.35,16.50,63.50 are the fares if discount is true
       return fares;//returns the fares
       //System.out.println(Arrays.toString(fares));
     } else{
@@ -96,10 +96,13 @@ public class TransitCalculator{
     System.out.println(custA.getBestFare(fares));
     //passes the fares to get the best fare and prints the statement
     
+    
+    //creates second instance for Customer B
     TransitCalculator custB = new TransitCalculator(26,54, false);
     fares = custB.getFares(custB.discount);
     System.out.println(custB.getBestFare(fares));
     
+    //creates third instance for Customer C
     TransitCalculator custC = new TransitCalculator(26,54, true);
     fares = custC.getFares(custC.discount);
     System.out.println(custC.getBestFare(fares));
